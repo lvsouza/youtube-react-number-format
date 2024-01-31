@@ -26,6 +26,11 @@ export function Numeric() {
         //suffix='$'
         thousandSeparator='.'
         //thousandsGroupStyle='thousand'
+
+        isAllowed={(values) => {
+          if (values.value.length > 9) return false;
+          return true;
+        }}
       />
     </>
   )
